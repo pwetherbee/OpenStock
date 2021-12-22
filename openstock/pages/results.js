@@ -12,15 +12,15 @@ export default function StandardImageList() {
         </Typography>
       </Grid>
       <Grid container justifyContent="center" item md={12}>
-        <TextField></TextField>
+        <TextField multiline rows={4}></TextField>
         <Button>Generate</Button>
       </Grid>
-      <ImageList sx={{ width: 500, height: 700 }} cols={3} rowHeight={164}>
+      <ImageList cols={3} rowHeight={300}>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
             <img
-              src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.img}?w=300&h=300&fit=crop&auto=format`}
+              srcSet={`${item.img}?w=300&h=300&fit=crop&auto=format&dpr=2 2x`}
               alt={item.title}
               loading="lazy"
             />
